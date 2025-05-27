@@ -100,7 +100,6 @@
     <wire from="(1400,550)" to="(1400,680)"/>
     <wire from="(640,600)" to="(750,600)"/>
     <wire from="(800,610)" to="(800,630)"/>
-    <wire from="(770,820)" to="(770,840)"/>
     <wire from="(1340,670)" to="(1340,680)"/>
     <wire from="(730,420)" to="(730,440)"/>
     <wire from="(720,770)" to="(720,790)"/>
@@ -181,38 +180,15 @@
     <wire from="(1030,530)" to="(1050,530)"/>
     <wire from="(960,570)" to="(1030,570)"/>
     <wire from="(970,530)" to="(1030,530)"/>
-    <comp lib="0" loc="(710,770)" name="Constant">
-      <a name="width" val="4"/>
-      <a name="value" val="0xf"/>
-    </comp>
-    <comp lib="0" loc="(690,930)" name="Clock"/>
-    <comp lib="6" loc="(770,820)" name="Hex Digit Display"/>
-    <comp lib="7" loc="(1291,456)" name="Text">
-      <a name="text" val="SALIDA"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="7" loc="(631,401)" name="Text">
-      <a name="text" val="REACTORES"/>
-    </comp>
-    <comp lib="4" loc="(730,820)" name="Subtractor">
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="7" loc="(1022,413)" name="Text">
-      <a name="text" val="Guardado De Datos"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="0" loc="(830,500)" name="Splitter">
-      <a name="facing" val="north"/>
-      <a name="bit1" val="0"/>
-    </comp>
-    <comp lib="6" loc="(1270,680)" name="RGBLed">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="4" loc="(1230,590)" name="Comparator">
-      <a name="width" val="2"/>
-      <a name="mode" val="unsigned"/>
-    </comp>
-    <comp loc="(930,720)" name="IsZero"/>
+    <wire from="(770,840)" to="(770,950)"/>
+    <wire from="(770,950)" to="(790,950)"/>
+    <wire from="(790,930)" to="(790,950)"/>
+    <wire from="(790,930)" to="(830,930)"/>
+    <wire from="(860,930)" to="(900,930)"/>
+    <wire from="(900,850)" to="(900,930)"/>
+    <wire from="(940,850)" to="(940,940)"/>
+    <wire from="(860,940)" to="(940,940)"/>
+    <comp lib="6" loc="(620,540)" name="Hex Digit Display"/>
     <comp lib="7" loc="(743,736)" name="Text">
       <a name="text" val="CUENTAREGRESIVA"/>
     </comp>
@@ -220,49 +196,86 @@
       <a name="width" val="4"/>
       <a name="max" val="0xf"/>
     </comp>
-    <comp lib="0" loc="(790,580)" name="Constant">
-      <a name="facing" val="south"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp loc="(1110,640)" name="memoria2bits"/>
-    <comp loc="(1110,470)" name="memoria2bits"/>
-    <comp lib="0" loc="(810,430)" name="Constant">
-      <a name="facing" val="south"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="3" loc="(590,920)" name="Multiplexer">
-      <a name="facing" val="west"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="7" loc="(627,564)" name="Text">
-      <a name="text" val="ENFRIAMIENTO"/>
-    </comp>
-    <comp lib="6" loc="(1340,680)" name="RGBLed">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="6" loc="(620,540)" name="Hex Digit Display"/>
-    <comp lib="7" loc="(770,407)" name="Text">
-      <a name="text" val="SUMADORDEACTIVOS"/>
+    <comp loc="(860,930)" name="displayHandler"/>
+    <comp lib="6" loc="(900,850)" name="Hex Digit Display"/>
+    <comp lib="0" loc="(710,770)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0xf"/>
     </comp>
     <comp lib="0" loc="(830,650)" name="Splitter">
       <a name="facing" val="north"/>
       <a name="bit1" val="0"/>
     </comp>
-    <comp loc="(780,600)" name="SumadorDeActivos"/>
+    <comp loc="(780,450)" name="SumadorDeActivos"/>
+    <comp loc="(1110,470)" name="memoria2bits"/>
+    <comp loc="(1110,640)" name="memoria2bits"/>
+    <comp lib="4" loc="(1230,590)" name="Comparator">
+      <a name="width" val="2"/>
+      <a name="mode" val="unsigned"/>
+    </comp>
+    <comp lib="7" loc="(631,401)" name="Text">
+      <a name="text" val="REACTORES"/>
+    </comp>
+    <comp lib="6" loc="(940,850)" name="Hex Digit Display"/>
+    <comp lib="7" loc="(862,753)" name="Text">
+      <a name="text" val=" "/>
+    </comp>
+    <comp loc="(1090,560)" name="detectorDeCambios"/>
+    <comp lib="7" loc="(843,909)" name="Text">
+      <a name="text" val="DisplayHandler"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="6" loc="(1270,680)" name="RGBLed">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(830,500)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="bit1" val="0"/>
+    </comp>
+    <comp lib="6" loc="(620,700)" name="Hex Digit Display"/>
+    <comp loc="(930,720)" name="IsZero"/>
+    <comp lib="7" loc="(770,407)" name="Text">
+      <a name="text" val="SUMADORDEACTIVOS"/>
+    </comp>
     <comp lib="6" loc="(640,410)" name="DipSwitch">
       <a name="NSwitches" val="3"/>
     </comp>
-    <comp loc="(780,450)" name="SumadorDeActivos"/>
-    <comp lib="6" loc="(620,700)" name="Hex Digit Display"/>
+    <comp loc="(780,600)" name="SumadorDeActivos"/>
+    <comp lib="7" loc="(1022,413)" name="Text">
+      <a name="text" val="Guardado De Datos"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="6" loc="(1340,680)" name="RGBLed">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="3" loc="(590,920)" name="Multiplexer">
+      <a name="facing" val="west"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(690,930)" name="Clock"/>
+    <comp lib="4" loc="(730,820)" name="Subtractor">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="7" loc="(627,564)" name="Text">
+      <a name="text" val="ENFRIAMIENTO"/>
+    </comp>
     <comp lib="6" loc="(640,570)" name="DipSwitch">
       <a name="NSwitches" val="3"/>
     </comp>
-    <comp loc="(1090,560)" name="detectorDeCambios"/>
     <comp lib="6" loc="(1410,680)" name="RGBLed">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="7" loc="(862,753)" name="Text">
-      <a name="text" val=" "/>
+    <comp lib="0" loc="(790,580)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="7" loc="(1291,456)" name="Text">
+      <a name="text" val="SALIDA"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="0" loc="(810,430)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="value" val="0x0"/>
     </comp>
   </circuit>
   <circuit name="SumadorDeActivos">
@@ -307,33 +320,33 @@
     <wire from="(480,150)" to="(480,170)"/>
     <wire from="(350,150)" to="(480,150)"/>
     <wire from="(480,170)" to="(510,170)"/>
-    <comp lib="4" loc="(270,190)" name="Adder">
-      <a name="width" val="1"/>
-    </comp>
-    <comp lib="4" loc="(550,180)" name="Adder">
-      <a name="width" val="2"/>
-    </comp>
     <comp lib="0" loc="(100,150)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(250,130)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(100,230)" name="Pin">
+    <comp lib="0" loc="(100,190)" name="Pin">
       <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(350,150)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="2"/>
-      <a name="incoming" val="2"/>
     </comp>
     <comp lib="0" loc="(630,190)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="2"/>
     </comp>
-    <comp lib="0" loc="(100,190)" name="Pin">
+    <comp lib="0" loc="(100,230)" name="Pin">
       <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="4" loc="(550,180)" name="Adder">
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(250,130)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="4" loc="(270,190)" name="Adder">
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="0" loc="(350,150)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="2"/>
+      <a name="incoming" val="2"/>
     </comp>
     <comp lib="0" loc="(360,200)" name="Splitter">
       <a name="facing" val="west"/>
@@ -383,6 +396,26 @@
     <wire from="(570,260)" to="(590,260)"/>
     <wire from="(480,280)" to="(510,280)"/>
     <comp lib="5" loc="(460,220)" name="D Flip-Flop"/>
+    <comp lib="5" loc="(330,220)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(80,260)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="7" loc="(122,86)" name="Text">
+      <a name="text" val="A_{(2)}"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="0" loc="(110,260)" name="Splitter">
+      <a name="fanout" val="2"/>
+      <a name="incoming" val="2"/>
+    </comp>
+    <comp lib="0" loc="(140,190)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="7" loc="(127,160)" name="Text">
+      <a name="text" val="PULSO DE CAMBIO"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
     <comp lib="0" loc="(590,260)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -392,28 +425,8 @@
       <a name="text" val="A"/>
       <a name="font" val="Dialog plain 12"/>
     </comp>
-    <comp lib="0" loc="(140,190)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(80,260)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-    </comp>
     <comp lib="0" loc="(530,270)" name="Splitter">
       <a name="facing" val="west"/>
-      <a name="fanout" val="2"/>
-      <a name="incoming" val="2"/>
-    </comp>
-    <comp lib="5" loc="(330,220)" name="D Flip-Flop"/>
-    <comp lib="7" loc="(122,86)" name="Text">
-      <a name="text" val="A_{(2)}"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="7" loc="(127,160)" name="Text">
-      <a name="text" val="PULSO DE CAMBIO"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="0" loc="(110,260)" name="Splitter">
       <a name="fanout" val="2"/>
       <a name="incoming" val="2"/>
     </comp>
@@ -442,13 +455,13 @@
     <comp lib="4" loc="(380,280)" name="Comparator">
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(460,280)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-    </comp>
     <comp lib="0" loc="(270,210)" name="Constant">
       <a name="width" val="4"/>
       <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(460,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(170,320)" name="Pin">
       <a name="width" val="4"/>
@@ -472,23 +485,23 @@
     <wire from="(750,650)" to="(870,650)"/>
     <wire from="(900,640)" to="(920,640)"/>
     <wire from="(940,640)" to="(1010,640)"/>
-    <comp lib="1" loc="(940,640)" name="NOT Gate"/>
-    <comp lib="4" loc="(750,640)" name="Comparator">
-      <a name="width" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1010,640)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-    </comp>
     <comp lib="0" loc="(630,660)" name="Pin">
       <a name="width" val="2"/>
       <a name="tristate" val="false"/>
     </comp>
+    <comp lib="1" loc="(940,640)" name="NOT Gate"/>
+    <comp lib="0" loc="(1010,640)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(900,640)" name="OR Gate"/>
     <comp lib="0" loc="(630,610)" name="Pin">
       <a name="width" val="2"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="1" loc="(900,640)" name="OR Gate"/>
+    <comp lib="4" loc="(750,640)" name="Comparator">
+      <a name="width" val="2"/>
+    </comp>
   </circuit>
   <circuit name="detectorDeCambios">
     <a name="circuit" val="detectorDeCambios"/>
@@ -530,34 +543,6 @@
     <wire from="(820,700)" to="(850,700)"/>
     <wire from="(820,640)" to="(820,700)"/>
     <wire from="(880,710)" to="(1010,710)"/>
-    <comp lib="7" loc="(651,717)" name="Text">
-      <a name="text" val="ENFRIADORES"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="7" loc="(644,626)" name="Text">
-      <a name="text" val="REACTORES"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="1" loc="(810,740)" name="NOT Gate"/>
-    <comp lib="7" loc="(579,464)" name="Text">
-      <a name="text" val="N : NUEVO DATO"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="1" loc="(880,710)" name="OR Gate"/>
-    <comp lib="7" loc="(543,682)" name="Text">
-      <a name="text" val="A"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="7" loc="(547,738)" name="Text">
-      <a name="text" val="N"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="7" loc="(576,490)" name="Text">
-      <a name="text" val="A: ANTIGUO DATO"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="1" loc="(800,640)" name="NOT Gate"/>
-    <comp loc="(740,640)" name="ISorISNotEqual"/>
     <comp lib="7" loc="(547,778)" name="Text">
       <a name="text" val="A"/>
       <a name="font" val="Dialog plain 12"/>
@@ -566,26 +551,125 @@
       <a name="width" val="2"/>
       <a name="tristate" val="false"/>
     </comp>
+    <comp lib="0" loc="(600,640)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+    </comp>
     <comp lib="0" loc="(600,770)" name="Pin">
       <a name="width" val="2"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(1010,710)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
+    <comp loc="(740,640)" name="ISorISNotEqual"/>
+    <comp lib="7" loc="(547,738)" name="Text">
+      <a name="text" val="N"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="0" loc="(600,730)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp loc="(770,740)" name="ISorISNotEqual"/>
+    <comp lib="7" loc="(644,626)" name="Text">
+      <a name="text" val="REACTORES"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="1" loc="(810,740)" name="NOT Gate"/>
+    <comp lib="1" loc="(880,710)" name="OR Gate"/>
+    <comp lib="1" loc="(800,640)" name="NOT Gate"/>
+    <comp lib="7" loc="(651,717)" name="Text">
+      <a name="text" val="ENFRIADORES"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(543,682)" name="Text">
+      <a name="text" val="A"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(576,490)" name="Text">
+      <a name="text" val="A: ANTIGUO DATO"/>
+      <a name="font" val="Dialog plain 12"/>
     </comp>
     <comp lib="7" loc="(542,637)" name="Text">
       <a name="text" val="N"/>
       <a name="font" val="Dialog plain 12"/>
     </comp>
-    <comp lib="0" loc="(600,640)" name="Pin">
-      <a name="width" val="2"/>
+    <comp lib="7" loc="(579,464)" name="Text">
+      <a name="text" val="N : NUEVO DATO"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="0" loc="(1010,710)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+  </circuit>
+  <circuit name="displayHandler">
+    <a name="circuit" val="displayHandler"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(620,660)" to="(620,670)"/>
+    <wire from="(620,670)" to="(630,670)"/>
+    <wire from="(610,690)" to="(610,710)"/>
+    <wire from="(610,690)" to="(630,690)"/>
+    <wire from="(650,720)" to="(720,720)"/>
+    <wire from="(650,700)" to="(650,720)"/>
+    <wire from="(720,690)" to="(720,720)"/>
+    <wire from="(550,560)" to="(550,660)"/>
+    <wire from="(550,660)" to="(620,660)"/>
+    <wire from="(530,660)" to="(550,660)"/>
+    <wire from="(550,560)" to="(590,560)"/>
+    <wire from="(570,580)" to="(590,580)"/>
+    <wire from="(570,580)" to="(570,710)"/>
+    <wire from="(570,710)" to="(610,710)"/>
+    <wire from="(520,710)" to="(570,710)"/>
+    <wire from="(740,490)" to="(750,490)"/>
+    <wire from="(780,490)" to="(800,490)"/>
+    <wire from="(800,490)" to="(800,510)"/>
+    <wire from="(770,510)" to="(800,510)"/>
+    <wire from="(750,490)" to="(750,530)"/>
+    <wire from="(770,510)" to="(770,530)"/>
+    <wire from="(760,560)" to="(760,660)"/>
+    <wire from="(760,660)" to="(800,660)"/>
+    <wire from="(710,540)" to="(710,580)"/>
+    <wire from="(710,540)" to="(740,540)"/>
+    <wire from="(720,690)" to="(800,690)"/>
+    <wire from="(630,580)" to="(710,580)"/>
+    <comp lib="0" loc="(800,690)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="4" loc="(630,570)" name="Comparator">
+      <a name="width" val="4"/>
+      <a name="mode" val="unsigned"/>
+    </comp>
+    <comp lib="3" loc="(760,560)" name="Multiplexer">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(780,490)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(530,660)" name="Pin">
+      <a name="width" val="4"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp loc="(770,740)" name="ISorISNotEqual"/>
-    <comp lib="0" loc="(600,730)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
+    <comp lib="0" loc="(520,710)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0xa"/>
+    </comp>
+    <comp lib="4" loc="(670,680)" name="Divider">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(800,660)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(740,490)" name="Constant">
+      <a name="width" val="4"/>
     </comp>
   </circuit>
 </project>
